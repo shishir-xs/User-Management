@@ -24,6 +24,7 @@ final class Roxnor_User_Management
     private function __construct()
     {
         $this->define_constants();
+        register_activation_hook( __FILE__, [ $this, 'pluginActivate' ] );
     }
 
     public function define_constants(): void
@@ -51,6 +52,16 @@ final class Roxnor_User_Management
             self::$instance = new self();
         }
         return self::$instance;
+    }
+
+    public function pluginActivate(): void {
+        $installed = get_option( 'roxnor_user_installed' );
+
+        if ( ! $installed ) {
+            update_option( 'roxnor_user_installed', time() );
+        }
+
+        update_option( 'roxnor_user_version', ROXNOR_USER_VERSION );
     }
 }
 
