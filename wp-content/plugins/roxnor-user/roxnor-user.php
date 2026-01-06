@@ -15,6 +15,8 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 final class Roxnor_User_Management
 {
     private static $instance = null;
@@ -25,6 +27,7 @@ final class Roxnor_User_Management
     {
         $this->define_constants();
         register_activation_hook( __FILE__, [ $this, 'pluginActivate' ] );
+        add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
     }
 
     public function define_constants(): void
@@ -62,6 +65,15 @@ final class Roxnor_User_Management
         }
 
         update_option( 'roxnor_user_version', ROXNOR_USER_VERSION );
+    }
+
+    public function init_plugin() {
+
+        if ( is_admin() ) {
+            new Roxnor\UserManagement\Backend();
+        } else {
+            new Roxnor\UserManagement\Frontend();
+        }
     }
 }
 
