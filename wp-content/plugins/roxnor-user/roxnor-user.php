@@ -31,8 +31,20 @@ final class Roxnor_User_Management
         if (! defined('ROXNOR_USER_VERSION')) {
             define('ROXNOR_USER_VERSION', self::VERSION);
         }
+        if (! defined('ROXNOR_USER_FILE')) {
+            define('ROXNOR_USER_FILE', __FILE__);
+        }
+        if (! defined('ROXNOR_USER_PATH')) {
+            define('ROXNOR_USER_PATH', __DIR__);
+        }
+        if (! defined('ROXNOR_USER_URL')) {
+            define('ROXNOR_USER_URL', plugins_url('', ROXNOR_USER_FILE));
+        }
+        if (! defined('ROXNOR_USER_ASSETS')) {
+            define('ROXNOR_USER_ASSETS', ROXNOR_USER_URL . '/assets');
+        }
     }
-    
+
     public static function init(): Roxnor_User_Management
     {
         if (! self::$instance) {
