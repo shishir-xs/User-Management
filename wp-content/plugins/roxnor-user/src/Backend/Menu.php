@@ -1,14 +1,12 @@
 <?php 
 
-namespace Roxnor\UserManagement\Backend;
-
-class Menu {
+namespace Roxnor\UserManagement\Backend;class Menu {
     public function __construct() {
         add_action( 'admin_menu', [ $this, 'add_menu' ] );
     }
 
     public function add_menu() {
-        $parent_slug = 'roxnor-user-management';
+        $parent_slug = 'roxnor-user';
         $capability = 'manage_options';
 
         add_menu_page(
@@ -16,7 +14,7 @@ class Menu {
             'User Management',
             $capability,
             $parent_slug,
-            [ $this, 'render_page' ]
+              [ $this, 'render' ]
         );
 
         add_submenu_page(
@@ -25,7 +23,16 @@ class Menu {
             'Dashboard',
             $capability,
             $parent_slug,
-            [ $this, 'render_page' ]
+            [ $this, 'render' ]
+        );
+
+        add_submenu_page(
+            $parent_slug,
+            'List',
+            'List',
+            $capability,
+            $parent_slug . '&action=list',
+            [ $this, 'render' ]
         );
 
         add_submenu_page(
@@ -34,15 +41,12 @@ class Menu {
             'Import & Export',
             $capability,
             'roxnor-import-export',
-            [ $this, 'render_import_export' ]
+            [ $this, 'render' ]
         );
     }
 
-    public function render_page() {
-        echo '<h1>Hello This is RoxNor User Management Page !</h1>';
-    }
-
-    public function render_import_export() {
-        echo '<h1>Hello This is RoxNor Import & Export Page !</h1>';
+    public function render() {
+        $render = new Render();
+        $render->render();
     }
 }
