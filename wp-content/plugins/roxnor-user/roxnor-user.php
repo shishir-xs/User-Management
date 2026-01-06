@@ -13,3 +13,18 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
+
+final class Roxnor_User_Management {
+   const VERSION = '1.0';
+
+
+   private function __construct() {
+      $this->define_constants();
+   }
+
+   public function define_constants() {
+       if ( ! defined( 'ROXNOR_USER_VERSION' ) ) {
+           define( 'ROXNOR_USER_VERSION', self::VERSION );
+       }
+   }
+}
