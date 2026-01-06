@@ -20,11 +20,15 @@
 # Configuration
 wp-config.php
 
-# Example themes
-/wp-content/themes/twenty*/
+# All themes
+/wp-content/themes/
 
 # Example plugin
 /wp-content/plugins/hello.php
+/wp-content/plugins/akis
+# Plugin dependencies
+/wp-content/plugins/*/node_modules/
+/wp-content/plugins/*/vendor/
 
 # Uploads
 /wp-content/uploads/
@@ -41,8 +45,3 @@ wp-config.php
 # uncomment the next line
 #/wp-content/plugins
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes

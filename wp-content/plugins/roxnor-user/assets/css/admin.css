@@ -1,0 +1,251 @@
+/* Modern Professional User Management Styles */
+
+.roxnor-user-management {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Dashboard Cards */
+.roxnor-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.roxnor-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e1e5e9;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.roxnor-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+.roxnor-card-header {
+    padding: 24px 24px 0;
+    border-bottom: none;
+}
+
+.roxnor-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 8px;
+}
+
+.roxnor-card-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+}
+
+.roxnor-card-body {
+    padding: 24px;
+}
+
+.roxnor-stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.roxnor-stat-label {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Modern Buttons */
+.roxnor-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.roxnor-btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.roxnor-btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.roxnor-btn-secondary {
+    background: #f8fafc;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.roxnor-btn-secondary:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.roxnor-btn-danger {
+    background: #ef4444;
+    color: white;
+}
+
+.roxnor-btn-danger:hover {
+    background: #dc2626;
+}
+
+/* Modern Table */
+.roxnor-table-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e1e5e9;
+}
+
+.roxnor-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.roxnor-table th {
+    background: #f8fafc;
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.roxnor-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f3f4f6;
+    color: #374151;
+}
+
+.roxnor-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.roxnor-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Action Buttons */
+.roxnor-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.roxnor-action-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.roxnor-action-view {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.roxnor-action-view:hover {
+    background: #bfdbfe;
+}
+
+.roxnor-action-edit {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.roxnor-action-edit:hover {
+    background: #fde68a;
+}
+
+.roxnor-action-delete {
+    background: #fecaca;
+    color: #b91c1c;
+}
+
+.roxnor-action-delete:hover {
+    background: #fca5a5;
+}
+
+/* Modern Forms */
+.roxnor-form-container {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e1e5e9;
+    max-width: 600px;
+}
+
+.roxnor-form-group {
+    margin-bottom: 24px;
+}
+
+.roxnor-form-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.roxnor-form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.roxnor-form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.roxnor-form-help {
+    color: #6b7280;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Header */
+.roxnor-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.roxnor-page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
